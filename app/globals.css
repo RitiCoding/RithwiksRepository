@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Black + dark red theme. Dark is the default; the toggle sets
+   data-theme="light" on <html> (persisted in localStorage). */
+:root {
+  --paper: #0a0a0a;
+  --surface: #151514;
+  --ink: #f0efec;
+  --muted: #a9a7a1;
+  --faint: #7c7a74;
+  --accent: #cf4040;
+  --line: rgba(240, 239, 236, 0.13);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --paper: #f7f5f2;
+  --surface: #fffdfa;
+  --ink: #171513;
+  --muted: #5b5955;
+  --faint: #8a8781;
+  --accent: #8e1a1a;
+  --line: rgba(23, 21, 19, 0.14);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+/* Theme toggle shows the icon for the mode you'd switch TO. */
+:root:not([data-theme="light"]) .theme-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-sun {
+  display: none;
+}
