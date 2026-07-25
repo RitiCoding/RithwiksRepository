@@ -53,8 +53,10 @@ export const profile = {
   fullName: "Rithwik Nair",
   siteTitle: "Rithwik's Repository",
   availability: "open to work · austin, tx",
+  photo: { src: "/rithwik.jpg", alt: "Rithwik Nair" },
+  // **double asterisks** render as bold — see components/rich-text.tsx
   intro:
-    "i'm a roboticist and researcher at westwood high school in austin, tx. i direct our FRC team (2583 orange dynamite), captain FTC team 24133 (ChaiGPT robotics), and build quadrupeds, actuators, and biomedical wearables with custom PCBs on my own time. when i'm not in CAD or the machine shop, i'm running quantum cryptography simulations or prepping for varsity LD debate. i love building systems that survive the real world — reach out!",
+    "i'm a high school robotics engineer and researcher with experience across mechanical design, manufacturing, electronics, embedded systems, and software. i was selected as a **FIRST Dean's List Finalist (0.2%), and earned 2nd place in Texas for my research**. i enjoy solving difficult problems and building projects with real-world impact. feel free to **reach out!**",
   links: [
     { label: "email", href: "mailto:rithwikstnair@gmail.com" },
     { label: "github", href: "https://github.com/RitiCoding" },

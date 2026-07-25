@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Manrope } from "next/font/google";
+import { stripMarkers } from "@/components/rich-text";
 import ThemeToggle from "@/components/theme-toggle";
 import { profile } from "@/lib/data";
 import "./globals.css";
@@ -17,7 +18,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: profile.siteTitle,
-  description: profile.intro,
+  description: stripMarkers(profile.intro),
 };
 
 // Applies a stored light-theme preference before first paint (dark is the

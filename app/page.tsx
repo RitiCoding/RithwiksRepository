@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Projects from "@/components/projects";
+import RichText from "@/components/rich-text";
+import SocialIcon from "@/components/social-icons";
 import {
   awards,
   education,
@@ -188,33 +191,47 @@ export default function Home() {
 
   return (
     <div className="mx-auto w-full max-w-5xl flex-1 px-6 sm:px-10">
-      <header className="flex min-h-[85svh] flex-col justify-center py-24">
-        <p className="flex items-center gap-2.5 font-mono text-sm text-muted">
+      <header className="flex min-h-[85svh] flex-col justify-center gap-10 py-24 md:flex-row md:items-center md:gap-14">
+        <Image
+          src={profile.photo.src}
+          alt={profile.photo.alt}
+          width={1200}
+          height={900}
+          priority
+          sizes="(min-width: 768px) 240px, (min-width: 640px) 208px, 176px"
+          className="aspect-[4/5] w-44 shrink-0 rounded-md border border-line object-cover object-[45%_center] sm:w-52 md:w-60"
+        />
+        <div className="flex flex-col">
+          <p className="flex items-center gap-2.5 font-mono text-sm text-muted">
           <span
             aria-hidden
             className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent"
           />
-          {profile.availability}
-        </p>
-        <h1 className="mt-6 text-6xl font-extrabold tracking-tighter sm:text-7xl md:text-8xl">
-          hi, i&apos;m {profile.firstName}!
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">
-          {profile.intro}
-        </p>
-        <nav className="mt-10 flex gap-6">
-          {profile.links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel="noopener noreferrer"
-              className="font-mono text-sm text-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+            {profile.availability}
+          </p>
+          <h1 className="mt-6 text-5xl font-extrabold tracking-tighter sm:text-6xl md:text-7xl">
+            hi, i&apos;m {profile.firstName}!
+          </h1>
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
+            <RichText text={profile.intro} />
+          </p>
+          <nav className="mt-9 flex flex-wrap gap-6">
+            {profile.links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 font-mono text-sm text-muted transition-colors hover:text-accent"
+              >
+                <SocialIcon label={link.label} />
+                <span className="underline-offset-4 group-hover:underline">
+                  {link.label}
+                </span>
+              </a>
+            ))}
+          </nav>
+        </div>
       </header>
 
       <main>
