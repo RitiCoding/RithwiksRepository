@@ -19,6 +19,19 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: profile.siteTitle,
   description: stripMarkers(profile.intro),
+  // Keep this site out of search results. Inherited by every route, including
+  // /projects/*. Note: robots.txt must NOT disallow crawling — a blocked
+  // crawler never reads these tags, which is what actually keeps pages out.
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
 };
 
 // Applies a stored light-theme preference before first paint (dark is the
