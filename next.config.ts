@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // Every page is prerendered, so nothing reads public/content at runtime.
+  // Without this, big videos would be bundled into the server function and
+  // could push a deploy past Vercel's size limit.
+  outputFileTracingExcludes: {
+    "/*": ["public/content/**/*"],
+  },
   // Belt-and-braces companion to the `robots` metadata in app/layout.tsx:
   // covers non-HTML responses (images, icon.svg) that carry no meta tags.
   async headers() {

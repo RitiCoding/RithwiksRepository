@@ -1,0 +1,95 @@
+HOW TO EDIT YOUR SITE
+=====================
+
+Everything you'd ever want to change lives in this folder. You never need to
+open the code. Open a .txt file in Notepad or VS Code, change the words, save.
+
+  about.txt        Your greeting, bio, contact links, and the small red notes
+  portrait.jpg     The framed photo on the main page
+  skills.txt       The Skills page
+  experience.txt   The Experience page
+  awards.txt       The Awards page
+  projects         One folder per project, holding its text and its pictures
+
+
+CHANGE A PROJECT'S PICTURES AND DESCRIPTIONS
+--------------------------------------------
+Open the project's folder, then open project.txt. Each picture looks like this:
+
+    image: filler
+    The description that appears under the picture.
+
+To use a real picture:
+  1. Drop the file into the project's folder.
+  2. Change the word filler to the file's name, like this:  image: first-walk.jpg
+  3. Rewrite the description underneath it.
+
+Want another picture? Copy those two lines and paste them where you want it.
+Want one gone? Delete its lines. They appear on the page in the same order
+as the file.
+
+Videos work the same way. Use an .mp4 file, or paste a YouTube link:
+
+    video: walking-test.mp4
+    The description that appears under the video.
+
+    video: https://www.youtube.com/watch?v=abc123
+    The description that appears under the video.
+
+The picture on the main page is the "thumbnail:" line. Leave it as filler and
+the site automatically uses the first real picture in the project.
+
+
+ADD A NEW PROJECT
+-----------------
+  1. Inside the projects folder, copy the folder called _new-project.
+  2. Rename the copy, for example:  07-my-new-robot
+     The number is its position on the main page.
+     The words become its web address: /projects/my-new-robot
+  3. Put your pictures and videos in that folder.
+  4. Open project.txt and fill it in. It explains itself.
+
+To reorder projects, change the numbers on the folders.
+To hide a project without deleting it, put an underscore at the start of its
+folder name, like:  _07-my-new-robot
+
+
+SEE YOUR CHANGES BEFORE THEY GO LIVE
+------------------------------------
+In a terminal, inside your portfolio folder, run:
+
+    npm run dev
+
+Then open http://localhost:3000 and refresh after each save.
+
+If a spot still says "Photo coming soon" when it shouldn't, a short red message
+in that spot tells you what's wrong, like a misspelled file name. Only you see
+that message. Visitors just see the filler.
+
+
+PUT IT ONLINE
+-------------
+In a terminal, inside your portfolio folder, run these one at a time:
+
+    git add .
+    git commit -m "updated my projects"
+    git push
+
+Vercel publishes the site by itself about a minute later.
+
+No terminal handy? You can also do all of this on github.com. Open any file
+in your repository and click the pencil to edit it, or use Add file, then
+Upload files, to add pictures. Saving there publishes the site the same way.
+
+
+GOOD TO KNOW
+------------
+- iPhone photos are often .HEIC files, which websites can't show. Save them as
+  .jpg first. To skip this forever: iPhone Settings, Camera, Formats, and
+  choose Most Compatible.
+- Big photos are fine. The site resizes them automatically.
+- Keep video files under about 50 MB, because GitHub refuses anything over
+  100 MB. Upload longer videos to YouTube and paste the link instead.
+- Lines that start with "# " are notes to yourself and never show on the site.
+- In any description, **double asterisks** make text bold, and
+  [these brackets](https://example.com) make a link.

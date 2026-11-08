@@ -1,0 +1,24 @@
+# Each "award:" line starts a new entry on the Awards page.
+# "mark" is the short thing that gets circled in red. Keep it to a word or two.
+# "about" is optional. Leave it out if the title says enough.
+
+intro: A few people were kind enough to say the work was good.
+
+award: FIRST Dean's List Finalist
+mark: Top 0.2%
+from: FIRST
+about: About 200 finalists out of 100,000 students, for leadership and technical work in FIRST.
+
+award: 2nd Place, Systems Software
+mark: 2nd
+from: Texas Science and Engineering Fair
+about: For my research on quantum key distribution in secure messaging systems.
+
+award: 2nd Place, Systems Software
+mark: 2nd
+from: Greater Austin Science and Engineering Fair
+about: Quantum key distribution again, at the regional level.
+
+award: Fusion 360 Certification
+mark: Certified
+from: Project Lead The Way

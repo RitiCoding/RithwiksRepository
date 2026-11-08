@@ -1,0 +1,55 @@
+# Each "place:" line starts a new entry on the Experience page.
+# They show up in the same order as this file.
+# Any entry whose "when" ends in "now" gets a small "Still at it" note.
+
+intro: Teams I've led, labs I've worked in, and the stuff I do on my own time.
+
+place: Westwood Robotics
+role: FRC Director
+when: May 2026 - now
+about: Leading FRC 2583 Orange Dynamite and directing 70+ students as they design and maintain competitive robots on the international stage.
+
+place: Westwood Robotics
+role: Lead Design Engineer
+when: Aug 2024 - May 2026
+about: Lead mechanical architect across an FRC season. Designed drivetrains, multi-stage elevators, linkage manipulators, and compliant intakes, then ran fabrication across CNC, sheet metal, and additive. Validated it all across 10+ events.
+
+place: ChaiGPT Robotics
+role: Team Captain, FTC 24133
+when: Mar 2023 - now
+about: Captain and lead hardware engineer across three FTC seasons. I own the full CAD in Onshape and Fusion 360, and we've tracked what breaks across 30+ tournaments.
+
+place: Independent
+role: Roboticist and Researcher
+when: Jan 2022 - now
+about: My own robots and biomedical builds, including a reconfigurable quadruped, a closed-loop tVNS wearable, and custom actuators. Everything from CAD and custom PCBs to firmware and testing.
+
+place: FIRST Robotics
+role: Student Volunteer and Mentor
+when: Aug 2024 - now
+about: Mentoring FTC and FRC teams, leading outreach that helped launch multiple new teams, and working with educators and district leadership to grow local robotics.
+
+place: NYU Tandon School of Engineering
+role: Student Researcher, SPARC
+when: Jul 2025 - Aug 2025
+about: Applied robotics research under university mentorship. Took a technical project from proposal through deployment and wrote it up to academic standards.
+
+place: Southern Methodist University
+role: Student Researcher, GSTCA
+when:
+about: Researched drones alongside PhD students at SMU through the GSTCA program.
+
+place: Intel ISEF
+role: Student Researcher
+when: Aug 2024 - now
+about: Quantum cryptography research. Built a simulation framework for quantum key distribution that took 2nd place in Systems Software at both the Greater Austin and Texas science fairs.
+
+place: Westwood High School
+role: Varsity Lincoln-Douglas Debater
+when: Aug 2024 - now
+about: Debating on a nationally top-10 ranked team, with a lot of research into philosophy, ethics, and public policy.
+
+place: Westwood High School
+role: Student, 4.0 unweighted GPA
+when: Graduating May 2028
+about: AP Computer Science A, Computer Science Principles, Calculus AB, Precalculus, Physics 1, World History, and Human Geography. PLTW Intro to Engineering Design and Principles of Engineering.

@@ -1,0 +1,31 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-walk.jpg
+# The words under each image are the description that shows up below it.
+
+title: MORPHONEX
+years: 2025 - now
+tagline: A four-legged robot that changes its stance to suit the terrain and handles objects with its forearms.
+thumbnail: filler
+link:
+link text:
+
+story:
+MORPHONEX is a complete quadruped that I modeled in Onshape and SolidWorks, from the frame and articulated legs down to the drivetrain and the mechanisms that let the body reconfigure itself.
+
+A LiPo battery feeds a 24V rail that drives high-torque gimbal motors over a CAN loop to a Teensy 4.1. A Raspberry Pi 5 sits on a 5V rail for compute.
+
+I derived the inverse kinematics it needs to walk and balance on its own, then tuned each motor's PID controller for positioning accuracy, response time, stability, and disturbance correction.
+
+The reconfigurable body lets it adjust its stance for different terrain, and the forearm manipulators let it work with objects.
+
+image: filler
+Filler description. A full-body photo or CAD render of the robot would go here.
+
+video: filler
+Filler description. A clip of it walking or balancing would go here.
+
+image: filler
+Filler description. A close-up of a leg and its gimbal motors would go here.
+
+image: filler
+Filler description. The electronics would go here: the Teensy, the Pi, and the CAN wiring.

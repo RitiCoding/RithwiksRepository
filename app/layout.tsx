@@ -1,42 +1,46 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Manrope } from "next/font/google";
-import { stripMarkers } from "@/components/rich-text";
-import ThemeToggle from "@/components/theme-toggle";
-import { profile } from "@/lib/data";
+import { Alegreya_Sans, Besley } from "next/font/google";
+import { getProfile } from "@/lib/content";
+import { plainText } from "@/lib/text-format";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const besley = Besley({
+  variable: "--font-besley",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
+const alegreya = Alegreya_Sans({
+  variable: "--font-alegreya",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
 });
 
-export const metadata: Metadata = {
-  title: profile.siteTitle,
-  description: stripMarkers(profile.intro),
-  // Keep this site out of search results. Inherited by every route, including
-  // /projects/*. Note: robots.txt must NOT disallow crawling — a blocked
-  // crawler never reads these tags, which is what actually keeps pages out.
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  const profile = await getProfile();
+
+  return {
+    title: {
+      default: profile.siteName,
+      template: `%s | ${profile.siteName}`,
+    },
+    description: plainText(profile.bio),
+    // Keep this site out of search results. Inherited by every route. Note:
+    // robots.txt must NOT disallow crawling, because a blocked crawler never
+    // reads these tags, and they are what actually keep pages out.
+    robots: {
       index: false,
       follow: false,
-      noimageindex: true,
+      nocache: true,
+      googleBot: {
+        index: false,
+        follow: false,
+        noimageindex: true,
+      },
     },
-  },
-};
-
-// Applies a stored light-theme preference before first paint (dark is the
-// CSS default, so only "light" needs to be set).
-const themeInit = `try{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}`;
+  };
+}
 
 export default function RootLayout({
   children,
@@ -46,12 +50,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
-      className={`${manrope.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${besley.variable} ${alegreya.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
-        <ThemeToggle />
+      {/* Browser extensions like Grammarly add attributes to <body>. */}
+      <body suppressHydrationWarning className="min-h-svh">
         {children}
       </body>
     </html>

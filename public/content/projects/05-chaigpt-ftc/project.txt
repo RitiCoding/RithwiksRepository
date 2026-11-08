@@ -1,0 +1,31 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: season-3-robot.jpg
+# The words under each image are the description that shows up below it.
+
+title: ChaiGPT Robotics
+years: 2023 - now
+tagline: Three seasons of FTC robots for Team 24133, as captain and lead hardware engineer.
+thumbnail: filler
+link:
+link text:
+
+story:
+I've captained FTC Team 24133 and owned the full mechanical architecture of the robot for three seasons.
+
+Highlights include 5-stage differential linear slides, belt-driven intake assemblies, multi-pivot linkage manipulators, and high-efficiency transfer mechanisms for fast game-piece control.
+
+All of it is modeled in Onshape and Fusion 360 with tolerance stack-up analysis and weight distribution modeling, then iterated through stiffness testing, deflection measurement under peak load, and lead-screw versus belt trade studies.
+
+We build for repair: standardized fasteners, slotted belt tensioning, and rapid-swap assemblies, tracked with cycle-time benchmarks and MTBF numbers across 30+ tournaments.
+
+image: filler
+Filler description. A photo of this season's robot would go here.
+
+image: filler
+Filler description. Last season's robot would go here.
+
+image: filler
+Filler description. A CAD render of the slides or intake would go here.
+
+video: filler
+Filler description. A match clip would go here.

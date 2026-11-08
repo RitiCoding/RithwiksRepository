@@ -1,0 +1,28 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: simulation.png
+# The words under each image are the description that shows up below it.
+
+title: QKD Messaging
+years: 2024 - 2025
+tagline: Secure messaging built on a quantum key distribution simulation. 2nd in Systems Software at the Texas science fair.
+thumbnail: filler
+link: https://github.com/RitiCoding/QKD-Messaging
+link text: See the code on GitHub
+
+story:
+The question behind this project: how well does quantum key distribution work inside a real secure messaging system?
+
+I built a quantum field simulation in Python and translated a theoretical quantum cryptography algorithm into working code, including key generation, transmission, error detection, and eavesdropping detection.
+
+To make the physics fast enough to be useful, I vectorized the simulation with NumPy and cached intermediate states. PyCryptodome handles the encrypted communication on top of the simulated key exchange.
+
+It took 2nd place in Systems Software at both the Greater Austin and Texas Science and Engineering Fairs.
+
+image: filler
+Filler description. A screenshot of the messaging app would go here.
+
+image: filler
+Filler description. Output from the simulation or a results plot would go here.
+
+image: filler
+Filler description. A photo from the science fair would go here.

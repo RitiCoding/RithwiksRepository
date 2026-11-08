@@ -1,0 +1,40 @@
+# THIS IS THE TEMPLATE FOR A NEW PROJECT. Copy this whole folder to make one.
+# Folders that start with an underscore are hidden from the site, like this one.
+# Lines that start with "# " are notes to yourself and never show up.
+#
+# Fill in the right side of each line. Leave a line empty if it doesn't apply.
+
+title: Name of the project
+years: 2026
+tagline: One sentence about what it is. This shows on the main page.
+
+# The picture on the main page. Leave it blank to use the first picture below.
+thumbnail:
+
+# Optional button at the end of the page, for a repo, paper, or write-up.
+link:
+link text:
+
+story:
+Write about the project here, as much or as little as you want.
+
+Leave a blank line to start a new paragraph. Use **double asterisks** for bold,
+[a link like this](https://example.com) for links, and start lines with a dash
+for a list:
+
+- like this
+- and this
+
+# Now the pictures and videos, top to bottom, in the order you want them.
+# Put the file in this folder and write its name after "image:" or "video:".
+# Whatever you write underneath is the description shown below it.
+# Need more? Copy two lines and keep going. Need fewer? Delete them.
+
+image: filler
+Describe what's in this picture.
+
+image: filler
+Describe what's in this picture.
+
+video: filler
+Describe what's in this video.
