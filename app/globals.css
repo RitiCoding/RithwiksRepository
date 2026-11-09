@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 /*
-  The look: a green engineering computation pad with photo prints taped down
-  and a red tool chest sitting on it. Red italics are the margin notes.
+  The look: white graph paper with photo prints taped down and a red tool
+  chest sitting on it. Red italics are the margin notes.
 */
 :root {
-  --paper: #e4ecd6;
-  --grid: rgba(58, 110, 74, 0.13);
+  --paper: #ffffff;
+  --grid: rgba(70, 115, 175, 0.17);
   --ink: #23291f;
   --ink-soft: #4d5546;
   --accent: #a3271c;

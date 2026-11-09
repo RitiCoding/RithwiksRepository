@@ -1,0 +1,24 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-test.jpg
+# The words under each image are the description that shows up below it.
+
+title: Lego Robot From Child
+years: 20XX
+tagline: Filler tagline. One sentence about what Lego Robot From Child is.
+thumbnail: filler
+link:
+link text:
+
+story:
+Filler story. Say what Lego Robot From Child is, why you built it, and what was hard about it.
+
+Filler story, continued. Add as many paragraphs as you want, or delete this one.
+
+image: filler
+Filler description. Say what's happening in this picture of Lego Robot From Child.
+
+image: filler
+Filler description. Say what's happening in this picture of Lego Robot From Child.
+
+video: filler
+Filler description. Say what's happening in this video of Lego Robot From Child.

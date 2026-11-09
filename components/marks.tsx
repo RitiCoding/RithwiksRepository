@@ -90,18 +90,6 @@ export function Mug({ className }: MarkProps) {
       <path d="M24 50h12v70h-1c-6 0-11-7-11-16z" fill="#e4d8bd" />
       <ellipse cx="58" cy="50" rx="34" ry="6.500" fill="#fbf5e6" />
       <ellipse cx="58" cy="50.500" rx="29" ry="4.500" fill="#b98852" />
-      <text
-        x="59"
-        y="92"
-        textAnchor="middle"
-        fontSize="19"
-        fontWeight="700"
-        fontStyle="italic"
-        fill="#9a2a1e"
-        fontFamily="var(--font-besley), serif"
-      >
-        chai
-      </text>
     </svg>
   );
 }

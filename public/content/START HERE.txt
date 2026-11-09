@@ -43,7 +43,7 @@ the site automatically uses the first real picture in the project.
 ADD A NEW PROJECT
 -----------------
   1. Inside the projects folder, copy the folder called _new-project.
-  2. Rename the copy, for example:  07-my-new-robot
+  2. Rename the copy, for example:  30-my-new-robot
      The number is its position on the main page.
      The words become its web address: /projects/my-new-robot
   3. Put your pictures and videos in that folder.
@@ -51,7 +51,7 @@ ADD A NEW PROJECT
 
 To reorder projects, change the numbers on the folders.
 To hide a project without deleting it, put an underscore at the start of its
-folder name, like:  _07-my-new-robot
+folder name, like:  _30-my-new-robot
 
 
 SEE YOUR CHANGES BEFORE THEY GO LIVE

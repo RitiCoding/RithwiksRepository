@@ -1,0 +1,24 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-test.jpg
+# The words under each image are the description that shows up below it.
+
+title: Larger Robot Arm
+years: 20XX
+tagline: Filler tagline. One sentence about what Larger Robot Arm is.
+thumbnail: filler
+link:
+link text:
+
+story:
+Filler story. Say what Larger Robot Arm is, why you built it, and what was hard about it.
+
+Filler story, continued. Add as many paragraphs as you want, or delete this one.
+
+image: filler
+Filler description. Say what's happening in this picture of Larger Robot Arm.
+
+image: filler
+Filler description. Say what's happening in this picture of Larger Robot Arm.
+
+video: filler
+Filler description. Say what's happening in this video of Larger Robot Arm.

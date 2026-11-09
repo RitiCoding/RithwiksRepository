@@ -1,0 +1,24 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-test.jpg
+# The words under each image are the description that shows up below it.
+
+title: SAT Wordmark
+years: 20XX
+tagline: Filler tagline. One sentence about what SAT Wordmark is.
+thumbnail: filler
+link:
+link text:
+
+story:
+Filler story. Say what SAT Wordmark is, why you built it, and what was hard about it.
+
+Filler story, continued. Add as many paragraphs as you want, or delete this one.
+
+image: filler
+Filler description. Say what's happening in this picture of SAT Wordmark.
+
+image: filler
+Filler description. Say what's happening in this picture of SAT Wordmark.
+
+video: filler
+Filler description. Say what's happening in this video of SAT Wordmark.

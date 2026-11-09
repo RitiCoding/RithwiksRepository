@@ -8,22 +8,22 @@ area: Mechanical
 CAD and design: Onshape, SolidWorks, Fusion 360, mechanism design, linkages and differentials, tolerance stack-ups, DFM/DFA
 Analysis and testing: FEA and CFD in SimScale, load and deflection testing, MTBF tracking, stiffness-to-weight optimization
 Manufacturing: Fusion 360 CAM, CNC machining on a Tormach PCNC 1100 and an OMIO X8, 6061 and 7075 aluminum, sheet metal, FDM printing
-seen in: morphonex, frc-2583, chaigpt-ftc, high-efficiency-actuators
+seen in: morphonex, 3d-printer
 
 area: Electrical and embedded
 PCB design: KiCad, hierarchical schematics, two-layer layout, DRC/ERC, SPICE simulation, hand soldering
 Embedded systems: SAMD21, Teensy 4.1, Raspberry Pi, CAN bus, real-time firmware, biopotential, GSR and temperature sensing
 Power and actuation: Power architecture, motor drivers, encoders, high-torque gimbal motors, EMI control
-seen in: vagosync, morphonex, high-efficiency-actuators
+seen in: vagosync, morphonex, complex-robot-with-pcb
 
 area: Software and research
 Programming: Python (NumPy, PyCryptodome), Java, C++, ROS, simulation frameworks
 Controls: Inverse kinematics, PID tuning, closed-loop systems, data acquisition pipelines
 Research: Quantum key distribution, protocol simulation, experimental design, technical writing
-seen in: qkd-messaging, morphonex, vagosync
+seen in: quantum-research, morphonex, vagosync
 
 area: People and communication
 Leading teams: FRC and FTC leadership with 70+ students, mentoring, outreach, project planning, directing fabrication
 Debate: Varsity Lincoln-Douglas, argumentation, public speaking
 Languages: English, Hindi, Malayalam, Spanish, French
-seen in: frc-2583, chaigpt-ftc
+

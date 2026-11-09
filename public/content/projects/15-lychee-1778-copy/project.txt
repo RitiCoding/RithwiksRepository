@@ -1,0 +1,24 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-test.jpg
+# The words under each image are the description that shows up below it.
+
+title: Lychee (1778 Copy)
+years: 20XX
+tagline: Filler tagline. One sentence about what Lychee (1778 Copy) is.
+thumbnail: filler
+link:
+link text:
+
+story:
+Filler story. Say what Lychee (1778 Copy) is, why you built it, and what was hard about it.
+
+Filler story, continued. Add as many paragraphs as you want, or delete this one.
+
+image: filler
+Filler description. Say what's happening in this picture of Lychee (1778 Copy).
+
+image: filler
+Filler description. Say what's happening in this picture of Lychee (1778 Copy).
+
+video: filler
+Filler description. Say what's happening in this video of Lychee (1778 Copy).

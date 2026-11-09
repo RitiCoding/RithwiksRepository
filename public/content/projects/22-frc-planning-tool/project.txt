@@ -1,0 +1,24 @@
+# To swap in a real picture: drop the file in this folder, then change the word
+# "filler" below to the file's name, like this:  image: first-test.jpg
+# The words under each image are the description that shows up below it.
+
+title: FRC Planning Tool
+years: 20XX
+tagline: Filler tagline. One sentence about what FRC Planning Tool is.
+thumbnail: filler
+link:
+link text:
+
+story:
+Filler story. Say what FRC Planning Tool is, why you built it, and what was hard about it.
+
+Filler story, continued. Add as many paragraphs as you want, or delete this one.
+
+image: filler
+Filler description. Say what's happening in this picture of FRC Planning Tool.
+
+image: filler
+Filler description. Say what's happening in this picture of FRC Planning Tool.
+
+video: filler
+Filler description. Say what's happening in this video of FRC Planning Tool.
