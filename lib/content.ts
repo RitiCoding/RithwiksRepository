@@ -57,7 +57,8 @@ export type Project = {
   title: string;
   years: string;
   tagline: string;
-  thumbnail: ImageMedia | FillerMedia;
+  tags: string[];
+  thumbnail: Media;
   story: TextBlock[];
   figures: Figure[];
   link?: { href: string; label: string };
@@ -69,18 +70,11 @@ export type Profile = {
   greeting: string;
   status: string;
   portrait: Media;
-  portraitNote: string;
+  portraitFocus: string;
   email: string;
   github: string;
   linkedin: string;
   bio: TextBlock[];
-  sayHi: string;
-  drawersNote: string;
-  skillsDrawer: string;
-  experienceDrawer: string;
-  awardsDrawer: string;
-  projectsHeading: string;
-  projectsNote: string;
   footer: string;
 };
 
@@ -255,12 +249,12 @@ async function loadProject(folder: string): Promise<Project | null> {
     location,
     where,
   );
-  const firstPicture = figures.find(
-    (figure): figure is Figure & { media: ImageMedia } =>
-      figure.media.kind === "image",
-  )?.media;
-  const thumbnail: Project["thumbnail"] =
-    chosen.kind === "image" ? chosen : (firstPicture ?? { kind: "filler" });
+  // With no thumbnail chosen, use the first real photo, then the first video.
+  const firstMedia =
+    figures.find((figure) => figure.media.kind === "image") ??
+    figures.find((figure) => figure.media.kind !== "filler");
+  const thumbnail =
+    chosen.kind === "filler" ? (firstMedia?.media ?? chosen) : chosen;
 
   const linkAddress = raw.fields.get("link")?.trim();
 
@@ -269,6 +263,10 @@ async function loadProject(folder: string): Promise<Project | null> {
     title: raw.fields.get("title") || folderToTitle(folder),
     years: raw.fields.get("years") ?? "",
     tagline: raw.fields.get("tagline") ?? "",
+    tags: (raw.fields.get("tags") ?? "")
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter(Boolean),
     thumbnail,
     story: toBlocks(raw.storyLines),
     figures,
@@ -277,7 +275,7 @@ async function loadProject(folder: string): Promise<Project | null> {
           href: /^https?:\/\//i.test(linkAddress)
             ? linkAddress
             : `https://${linkAddress}`,
-          label: raw.fields.get("link text") || "More about this project",
+          label: raw.fields.get("link text") || "More Info",
         }
       : undefined,
   };
@@ -312,18 +310,11 @@ const ABOUT_KEYS = [
   "greeting",
   "status",
   "portrait",
-  "portrait note",
+  "portrait focus",
   "email",
   "github",
   "linkedin",
   "bio",
-  "say hi",
-  "drawers note",
-  "skills drawer",
-  "experience drawer",
-  "awards drawer",
-  "projects heading",
-  "projects note",
   "footer",
 ] as const;
 
@@ -342,18 +333,11 @@ export const getProfile = cache(async (): Promise<Profile> => {
     greeting: line("greeting", "hello."),
     status: line("status"),
     portrait: await resolveMedia(line("portrait"), [], "about.txt"),
-    portraitNote: line("portrait note"),
+    portraitFocus: line("portrait focus", "50% 50%"),
     email: line("email"),
     github: line("github"),
     linkedin: line("linkedin"),
     bio: toBlocks(fields.get("bio") ?? []),
-    sayHi: line("say hi", "say hi"),
-    drawersNote: line("drawers note", "open a drawer"),
-    skillsDrawer: line("skills drawer"),
-    experienceDrawer: line("experience drawer"),
-    awardsDrawer: line("awards drawer"),
-    projectsHeading: line("projects heading", "Projects"),
-    projectsNote: line("projects note"),
     footer: line("footer"),
   };
 });

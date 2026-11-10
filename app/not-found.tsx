@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { BackHome } from "@/components/sub-page";
+import Link from "next/link";
 
-export const metadata: Metadata = { title: "Nothing here" };
+export const metadata: Metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
-    <main className="sheet py-24">
-      <h1 className="greeting">This drawer&rsquo;s empty.</h1>
-      <p className="bio">
-        There&rsquo;s nothing at this address. It may have moved, or the link
-        might have a typo.
-      </p>
-      <div className="mt-6">
-        <BackHome />
-      </div>
+    <main className="page detail">
+      <Link href="/" className="back-link">
+        <span aria-hidden>&larr;</span> Back
+      </Link>
+      <header className="detail-head">
+        <h1>Page not found.</h1>
+        <p className="detail-tagline">
+          There&rsquo;s nothing at this address. It may have moved, or the link
+          might have a typo.
+        </p>
+      </header>
     </main>
   );
 }

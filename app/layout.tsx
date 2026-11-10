@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Alegreya_Sans, Besley } from "next/font/google";
+import { Wix_Madefor_Display, Wix_Madefor_Text } from "next/font/google";
 import { getProfile } from "@/lib/content";
 import { plainText } from "@/lib/text-format";
 import "./globals.css";
 
-const besley = Besley({
-  variable: "--font-besley",
+const display = Wix_Madefor_Display({
+  variable: "--font-heading",
   subsets: ["latin"],
-  style: ["normal", "italic"],
 });
 
-const alegreya = Alegreya_Sans({
-  variable: "--font-alegreya",
+const text = Wix_Madefor_Text({
+  variable: "--font-text",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -50,12 +47,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${besley.variable} ${alegreya.variable} antialiased`}
+      className={`${display.variable} ${text.variable} antialiased`}
     >
       {/* Browser extensions like Grammarly add attributes to <body>. */}
-      <body suppressHydrationWarning className="min-h-svh">
-        {children}
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

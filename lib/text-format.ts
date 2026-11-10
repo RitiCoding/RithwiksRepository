@@ -31,6 +31,7 @@ const PROJECT_FIELDS = new Set([
   "title",
   "years",
   "tagline",
+  "tags",
   "thumbnail",
   "link",
   "link text",

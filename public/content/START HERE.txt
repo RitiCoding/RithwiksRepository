@@ -4,40 +4,57 @@ HOW TO EDIT YOUR SITE
 Everything you'd ever want to change lives in this folder. You never need to
 open the code. Open a .txt file in Notepad or VS Code, change the words, save.
 
-  about.txt        Your greeting, bio, contact links, and the small red notes
-  portrait.jpg     The framed photo on the main page
-  skills.txt       The Skills page
-  experience.txt   The Experience page
-  awards.txt       The Awards page
+  about.txt        Your greeting, bio, and contact links
+  portrait.jpg     The photo at the top of the page
+  skills.txt       The Skills section
+  experience.txt   The Experience section
+  awards.txt       The Awards section
   projects         One folder per project, holding its text and its pictures
 
 
-CHANGE A PROJECT'S PICTURES AND DESCRIPTIONS
---------------------------------------------
-Open the project's folder, then open project.txt. Each picture looks like this:
+CHANGE A PROJECT'S PHOTOS, VIDEOS, AND DESCRIPTIONS
+---------------------------------------------------
+Open the project's folder, then open project.txt. Every photo or video is one
+line saying what to show, with its description underneath:
 
-    image: filler
-    The description that appears under the picture.
-
-To use a real picture:
-  1. Drop the file into the project's folder.
-  2. Change the word filler to the file's name, like this:  image: first-walk.jpg
-  3. Rewrite the description underneath it.
-
-Want another picture? Copy those two lines and paste them where you want it.
-Want one gone? Delete its lines. They appear on the page in the same order
-as the file.
-
-Videos work the same way. Use an .mp4 file, or paste a YouTube link:
+    image: first-walk.jpg
+    The description that appears under the photo.
 
     video: walking-test.mp4
     The description that appears under the video.
 
     video: https://www.youtube.com/watch?v=abc123
-    The description that appears under the video.
+    The description that appears under the YouTube video.
 
-The picture on the main page is the "thumbnail:" line. Leave it as filler and
-the site automatically uses the first real picture in the project.
+Use a real photo or video:
+  Drop the file into the project's folder, then change the word filler to the
+  file's name. Capitals don't matter, and you can leave off the .jpg.
+
+Add another:
+  Drop the file in the folder, then copy an image: or video: line with its
+  description, paste it where you want it, and change the words.
+
+Edit a description:
+  Change the words under the image: or video: line. It can be as long as you
+  like. Leave a blank line to start a new paragraph.
+
+Remove one:
+  Delete its line and its description. You can delete the file too, but you
+  don't have to.
+
+Change the order:
+  Move those lines up or down. The page follows the order in the file.
+
+The picture on the project's button on the main page is the "thumbnail:" line.
+Leave it as filler and the site automatically uses the project's first real
+photo, or its first video if it has no photos.
+
+The "tags:" line holds the small labels on that button, separated by commas:
+
+    tags: Robotics, Electronics
+
+Each tag also becomes a filter above the projects, so reusing the same few
+words keeps that row short.
 
 
 ADD A NEW PROJECT
@@ -49,9 +66,26 @@ ADD A NEW PROJECT
   3. Put your pictures and videos in that folder.
   4. Open project.txt and fill it in. It explains itself.
 
-To reorder projects, change the numbers on the folders.
+To reorder projects, change the numbers on the folders. The main page repeats
+one pattern of big and small buttons, so the order also decides each button's
+size. The projects in positions 1, 7, 15, and 21 get the long buttons, and so
+does a project left alone on the last row.
 To hide a project without deleting it, put an underscore at the start of its
 folder name, like:  _30-my-new-robot
+
+
+CHANGE EVERYTHING ELSE
+----------------------
+Add an award:      open awards.txt, copy a block, and change the words.
+Add a job:         open experience.txt and do the same.
+Change skills:     open skills.txt. Each "area:" line is a column, and each
+                   line under it is a label, a colon, and the skills.
+Change your bio, greeting, status line, links, or footer:  open about.txt.
+Change your photo: replace portrait.jpg with a new photo of the same name.
+                   If the crop is off, change "portrait focus:" in about.txt.
+
+In every file, the order on the page is the order in the file. Delete a block
+to remove it.
 
 
 SEE YOUR CHANGES BEFORE THEY GO LIVE
@@ -87,6 +121,8 @@ GOOD TO KNOW
 - iPhone photos are often .HEIC files, which websites can't show. Save them as
   .jpg first. To skip this forever: iPhone Settings, Camera, Formats, and
   choose Most Compatible.
+- iPhone videos are often .MOV files, which some browsers won't play. Save them
+  as .mp4 first, or upload them to YouTube and paste the link.
 - Big photos are fine. The site resizes them automatically.
 - Keep video files under about 50 MB, because GitHub refuses anything over
   100 MB. Upload longer videos to YouTube and paste the link instead.

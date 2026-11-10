@@ -1,8 +1,10 @@
-# Each "place:" line starts a new entry on the Experience page.
+# Each "place:" line starts a new entry in the Experience section.
 # They show up in the same order as this file.
-# Any entry whose "when" ends in "now" gets a small "Still at it" note.
 
-intro: Teams I've led, labs I've worked in, and the stuff I do on my own time.
+place: Syrma SGS
+role: Product Design Intern
+when: 2026 - now
+about: Working alongside experienced engineers to develop real-world electrical products, from concept and circuit design through simulation, PCB development, and hardware implementation. Using KiCad and SPICE to design, analyze, and optimize circuits that can actually be manufactured.
 
 place: Westwood Robotics
 role: FRC Director

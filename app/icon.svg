@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#9a2a1e"/>
-  <rect x="10" y="14" width="44" height="18" rx="1" fill="#eee3c0" transform="rotate(-3 32 23)"/>
-  <rect x="15" y="43" width="34" height="8" rx="4" fill="#dcded8"/>
+  <rect width="64" height="64" rx="12" fill="#0f0f0e"/>
+  <text x="32" y="46" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="40" font-weight="800" fill="#f0efec">rr<tspan fill="#cf4040">.</tspan></text>
 </svg>

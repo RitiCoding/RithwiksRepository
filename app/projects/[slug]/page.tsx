@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { ArrowRight } from "@/components/marks";
 import { FigureMedia, mediaRatio } from "@/components/media";
-import { BackHome } from "@/components/sub-page";
 import { Blocks, RichText } from "@/components/text";
 import { getProjects } from "@/lib/content";
 import { plainText } from "@/lib/text-format";
@@ -35,70 +33,62 @@ export default async function ProjectPage(
   const next = projects[(index + 1) % projects.length];
 
   return (
-    <main className="sheet pb-20 pt-7">
-      <BackHome />
+    <main className="page detail">
+      <Link href="/" className="back-link">
+        <span aria-hidden>&larr;</span> Back
+      </Link>
 
-      <header>
-        <h1 className="project-title">
+      <header className="detail-head">
+        {project.years && <p className="availability">{project.years}</p>}
+        <h1>
           <RichText text={project.title} />
         </h1>
-        <div className="project-head">
-          <div>
-            {project.years && (
-              <p className="note text-[1.15rem]">{project.years}</p>
-            )}
-            {project.tagline && (
-              <p className="mt-2 text-[1.5rem] leading-[1.3]">
-                <RichText text={project.tagline} />
-              </p>
-            )}
+        {project.tagline && (
+          <p className="detail-tagline">
+            <RichText text={project.tagline} />
+          </p>
+        )}
+        {project.tags.length > 0 && (
+          <div className="tags">
+            {project.tags.map((tag) => (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            ))}
           </div>
-          <div className="prose-flow leading-[1.45]">
-            <Blocks blocks={project.story} />
-            {project.link && (
-              <p>
-                <a
-                  href={project.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link"
-                >
-                  <RichText text={project.link.label} />
-                </a>
-              </p>
-            )}
-          </div>
-        </div>
+        )}
       </header>
+
+      {project.story.length > 0 && (
+        <div className="detail-story prose-flow">
+          <Blocks blocks={project.story} />
+        </div>
+      )}
 
       {project.figures.length > 0 && (
         <div className="figures">
           {project.figures.map((figure, i) => {
             const ratio = mediaRatio(figure.media);
             return (
-              <figure key={i} className="figure">
+              <figure key={i}>
                 <div
-                  className="print figure-print"
+                  className="figure-photo"
                   style={
                     ratio ? ({ "--ratio": ratio } as CSSProperties) : undefined
                   }
                 >
-                  <span className="strip" aria-hidden />
-                  <div className="figure-photo">
-                    <FigureMedia
-                      media={figure.media}
-                      word={figure.word}
-                      alt={plainText(figure.caption)}
-                      seed={i}
-                      eager={i === 0}
-                    />
-                  </div>
+                  <FigureMedia
+                    media={figure.media}
+                    word={figure.word}
+                    alt={plainText(figure.caption)}
+                    eager={i === 0}
+                  />
                 </div>
-                <figcaption className="mt-4 flex max-w-[44rem] gap-4">
-                  <span className="note shrink-0 pt-1 text-[0.98rem]">
-                    Fig. {i + 1}
+                <figcaption>
+                  <span className="figure-number">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div className="prose-flow leading-[1.42]">
+                  <div className="prose-flow">
                     <Blocks blocks={figure.caption} />
                   </div>
                 </figcaption>
@@ -108,15 +98,25 @@ export default async function ProjectPage(
         </div>
       )}
 
-      <footer className="mt-20 flex flex-wrap items-center justify-between gap-6">
-        <BackHome />
+      {project.link && (
+        <a
+          href={project.link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="more-info"
+        >
+          <RichText text={project.link.label} />
+          <span aria-hidden>&#8599;</span>
+        </a>
+      )}
+
+      <footer className="detail-foot">
+        <Link href="/" className="back-link">
+          <span aria-hidden>&larr;</span> Back
+        </Link>
         {projects.length > 1 && (
-          <Link
-            href={`/projects/${next.slug}`}
-            className="back-home next-project"
-          >
-            Next up: <RichText text={next.title} />
-            <ArrowRight />
+          <Link href={`/projects/${next.slug}`} className="next-link">
+            Next: <RichText text={next.title} /> <span aria-hidden>&rarr;</span>
           </Link>
         )}
       </footer>

@@ -1,4 +1,4 @@
-# This file is the words on your main page.
+# This file is the words at the top of your site.
 # Change anything to the right of a colon, save, and you're done.
 # Lines that start with "# " are notes to yourself and never show on the site.
 # Wrap words in **double asterisks** to make them bold.
@@ -6,10 +6,12 @@
 site name: Rithwik's Repository
 name: Rithwik Nair
 greeting: Hi, I'm Rithwik.
-status: Based in Austin, Texas. Open to work.
+status: Westwood High School · Austin, Texas
 
 portrait: portrait.jpg
-portrait note: That's me
+# Which part of your photo stays in frame. The first number slides the crop
+# left to right (0% to 100%), and the second slides it top to bottom.
+portrait focus: 35% 50%
 
 email: rithwikstnair@gmail.com
 github: https://github.com/RitiCoding
@@ -18,14 +20,4 @@ linkedin: https://www.linkedin.com/in/rithwik-nair-8692ba323/
 bio:
 I'm a high school robotics engineer and researcher with experience across mechanical design, manufacturing, electronics, embedded systems, and software. I was selected as a **FIRST Dean's List Finalist (0.2%), and earned 2nd place in Texas for my research**. I enjoy solving difficult problems and building projects with real-world impact. Feel free to **reach out!**
 
-
-# The small red notes around the page. Make them sound like you.
-
-say hi: Say hi
-drawers note: Open a drawer
-skills drawer: What I know how to do
-experience drawer: Where I've done it
-awards drawer: Who noticed
-projects heading: Things I've built
-projects note: Click one, there's more inside
 footer: Thanks for stopping by.

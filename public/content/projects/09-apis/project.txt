@@ -1,10 +1,18 @@
-# To swap in a real picture: drop the file in this folder, then change the word
-# "filler" below to the file's name, like this:  image: first-test.jpg
-# The words under each image are the description that shows up below it.
+# HOW TO EDIT THIS PROJECT. Lines that start with "# " never show on the site.
+#
+# Use a real photo:    drop the file in this folder, then change the word filler
+#                      below to the file's name, like this:  image: first-test.jpg
+# Use a real video:    same thing, like this:  video: first-test.mp4
+#                      or with a YouTube link:  video: https://youtu.be/abc123
+# Edit a description:  change the words under the image: or video: line.
+# Add another:         copy an image: or video: line and its description.
+# Remove one:          delete its line and its description.
+# Change the order:    move those lines up or down.
 
 title: Apis
 years: 20XX
 tagline: Filler tagline. One sentence about what Apis is.
+tags: Other
 thumbnail: filler
 link:
 link text:

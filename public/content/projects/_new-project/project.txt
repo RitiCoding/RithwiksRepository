@@ -8,6 +8,9 @@ title: Name of the project
 years: 2026
 tagline: One sentence about what it is. This shows on the main page.
 
+# Comma-separated. Each tag becomes a filter button on the main page.
+tags: Robotics, Electronics
+
 # The picture on the main page. Leave it blank to use the first picture below.
 thumbnail:
 
@@ -28,6 +31,7 @@ for a list:
 # Now the pictures and videos, top to bottom, in the order you want them.
 # Put the file in this folder and write its name after "image:" or "video:".
 # Whatever you write underneath is the description shown below it.
+# A YouTube link works too, like this:  video: https://youtu.be/abc123
 # Need more? Copy two lines and keep going. Need fewer? Delete them.
 
 image: filler

@@ -1,18 +1,27 @@
-# Each "award:" line starts a new entry on the Awards page.
-# "mark" is the short thing that gets circled in red. Keep it to a word or two.
-# "about" is optional. Leave it out if the title says enough.
-
-intro: A few people were kind enough to say the work was good.
+# To add an award, copy a whole block below and change the words.
+# The order here is the order on the page. Delete a block to remove it.
+# "mark" is the short label shown beside the title. Keep it to a word or two.
+# "mark", "from", and "about" are all optional. Leave out any you don't need.
 
 award: FIRST Dean's List Finalist
 mark: Top 0.2%
 from: FIRST
 about: About 200 finalists out of 100,000 students, for leadership and technical work in FIRST.
 
+award: FIRST Tech Challenge Texas State Championship Division Inspire Winner
+mark: Winner
+from: Texas State Cup
+about: Solo-designed robot to win top FTC award given to 2 teams in the state.
+
 award: 2nd Place, Systems Software
 mark: 2nd
 from: Texas Science and Engineering Fair
 about: For my research on quantum key distribution in secure messaging systems.
+
+award: 1st Place Biomedical Sciences/Biomedical Engineering
+mark: 1st
+from: Greater Austin Science and Engineering Fair
+about: For my research and development of VagoSync, resolving PTSD for real patients.
 
 award: 2nd Place, Systems Software
 mark: 2nd
